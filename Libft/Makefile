@@ -6,11 +6,11 @@
 #    By: cfico-vi <cfico-vi@student.42sp.org.br>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/02/11 12:58:34 by cfico-vi          #+#    #+#              #
-#    Updated: 2021/02/11 15:22:19 by cfico-vi         ###   ########.fr        #
+#    Updated: 2021/02/11 16:46:38 by cfico-vi         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME	= hello
+NAME	= libft.a
 
 SRCS	= ft_memset.c
 
@@ -24,11 +24,14 @@ RM		= rm -f
 
 all:		${NAME}
 
-${NAME}:	${OBJS}
-			${CC} -o ${NAME} ${OBJS}
+teste:		${SRCS} main.c
+			${CC} ${CFLAGS} ${SRCS} main.c
 
-.c.o :
-			${CC} ${CFLAGS} -c $< -o ${<:.c=.o}
+${NAME}:	${OBJS}
+			ar rcs ${NAME} ${OBJS}
+
+${OBJS}: ${SRCS}
+	gcc ${CFLAGS} -c ${SRCS}
 
 clean:
 			${RM} ${OBJS}
