@@ -6,7 +6,7 @@
 /*   By: cfico-vi <cfico-vi@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/10 17:35:58 by cfico-vi          #+#    #+#             */
-/*   Updated: 2021/02/11 19:17:21 by cfico-vi         ###   ########.fr       */
+/*   Updated: 2021/02/12 09:44:03 by cfico-vi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,12 +14,10 @@
 
 void	*ft_memset(void *str, int c, size_t len)
 {
-	char	*ptr;
 	size_t	i;
 
-	ptr = str;
 	i = 0;
 	while (i < len)
-		*(ptr + i++) = c;
+		*(char*)(str + i++) = c;
 	return (str);
 }

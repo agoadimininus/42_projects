@@ -7,18 +7,18 @@ memccpy
 memmove
 memchr
 memcmp
-strlen
-strlcpy
+X strlen
+X strlcpy
 strlcat
-strchr
-strrchr
+X strchr
+X strrchr
 strnstr
-strncmp
+X strncmp
 atoi
-isalpha
-isdigit
-isalnum
-isascii
+X isalpha
+X isdigit
+X isalnum
+X isascii
 X isprint
 X toupper
 X tolower
