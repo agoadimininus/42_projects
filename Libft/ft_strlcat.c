@@ -1,25 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strncmp.c                                       :+:      :+:    :+:   */
+/*   ft_strlcat.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: cfico-vi <cfico-vi@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/02/16 23:26:12 by cfico-vi          #+#    #+#             */
-/*   Updated: 2021/02/16 23:26:15 by cfico-vi         ###   ########.fr       */
+/*   Created: 2021/02/17 16:05:49 by cfico-vi          #+#    #+#             */
+/*   Updated: 2021/02/17 16:23:59 by cfico-vi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_strncmp(const char *s1, const char *s2, size_t n)
+size_t	strlcat(char *dest, const char *src, size_t size)
 {
-	while (n-- > 0)
-	{
-		if (*s1 == '\0' || *s2 == '\0' || *s1 != *s2)
-			return (*((unsigned char*)s1) - *((unsigned char *)s2));
-		s1++;
-		s2++;
-	}
-	return (0);
+	if (!dest || !src)
+		return (0);
+	while (*dest++ && size-- > 0)
+		;
+	while (*src && size-- > 0)
+		*dest++ = *src++;
+	*dest = '\0';
+	return (ft_strlen(dest));
 }

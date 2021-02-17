@@ -6,7 +6,7 @@
 #    By: cfico-vi <cfico-vi@student.42sp.org.br>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/02/11 12:58:34 by cfico-vi          #+#    #+#              #
-#    Updated: 2021/02/16 23:30:42 by cfico-vi         ###   ########.fr        #
+#    Updated: 2021/02/17 16:28:58 by cfico-vi         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -27,6 +27,7 @@ SRCS	= ft_atoi.c \
 			ft_memmove.c \
 			ft_memset.c \
 			ft_strchr.c \
+			ft_strlcat.c \
 			ft_strlcpy.c \
 			ft_strlen.c \
 			ft_strncmp.c \
