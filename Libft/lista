@@ -2,17 +2,17 @@ PART 1:
 
 X memset
 X bzero
-X memcpy
-X memccpy
-X memmove
+>X memcpy
+>X memccpy
+>X memmove
 X memchr
-X memcmp
+>X memcmp
 X strlen
 X strlcpy
 strlcat
 X strchr
 X strrchr
-X strnstr
+>X strnstr
 X strncmp
 X atoi
 X isalpha
