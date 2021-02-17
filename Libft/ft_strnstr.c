@@ -1,39 +1,38 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memmove.c                                       :+:      :+:    :+:   */
+/*   ft_strnstr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: cfico-vi <cfico-vi@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/02/16 11:36:23 by cfico-vi          #+#    #+#             */
-/*   Updated: 2021/02/16 13:04:58 by cfico-vi         ###   ########.fr       */
+/*   Created: 2021/02/16 13:13:53 by cfico-vi          #+#    #+#             */
+/*   Updated: 2021/02/16 23:23:35 by cfico-vi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memmove(void *dest, const void *src, size_t n)
+char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 {
-	unsigned char *ptr;
-	unsigned char *ptr2;
-	unsigned char *tmp[n];
 	size_t i;
+	size_t j;
+	size_t k;
 
-	ptr = (unsigned char *)dest;
-	ptr2 = (unsigned char *)src;
 	i = 0;
-	if (!ptr && !ptr2)
-		return (0);
-	if ((ptr2 < ptr) && (ptr < ptr2 + n))
+	if (!needle[0])
+		return ((char *)haystack);
+	while (i++ < len)
 	{
-		i = n;
-		while (i--)
-			ptr[i] = ptr2[i];
+		j = 0;
+		if (haystack[i] == needle[j])
+		{
+			k = i;
+			while (haystack[k++] == needle[j++])
+				{
+				if (!needle[j])
+					return ((char *)haystack + i);
+				}
+		}
 	}
-	else
-	{
-		while (i++ < n)
-			ptr[i] = ptr2[i];
-	}
-	return (dest);
+	return(0);
 }
