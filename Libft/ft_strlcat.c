@@ -6,7 +6,7 @@
 /*   By: cfico-vi <cfico-vi@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/17 16:05:49 by cfico-vi          #+#    #+#             */
-/*   Updated: 2021/02/17 17:23:15 by cfico-vi         ###   ########.fr       */
+/*   Updated: 2021/02/17 17:35:10 by cfico-vi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,22 +14,28 @@
 
 size_t	ft_strlcat(char *dest, const char *src, size_t size)
 {
-	size_t	i;
-	size_t	j;
-	size_t	destlen;
-	size_t	srclen;
+	size_t			dstlen;
+	size_t			srclen;
+	unsigned int	i;
 
-	j = 0;
-	destlen = ft_strlen(dest);
+	dstlen = ft_strlen(dest);
 	srclen = ft_strlen(src);
-	i = destlen;
-	if (size <= destlen)
-		return (srclen + size);
-	if (size >= destlen)
+	i = 0;
+	if (size == 0)
+		return (srclen);
+	while (*dest != '\0' && i < size)
 	{
-		while (*src && i < (size - 1))
-			dest[i++] = src[j++];
-		dest[i] = '\0';
+		dest++;
+		i++;
 	}
-	return (destlen + srclen);
+	while (*src != '\0' && i < (size - 1))
+	{
+		*dest++ = *src++;
+		i++;
+	}
+	if (size > dstlen && size != 0)
+		*dest = '\0';
+	if (dstlen >= size)
+		return (size + srclen);
+	return (dstlen + srclen);
 }
