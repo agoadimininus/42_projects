@@ -6,7 +6,7 @@
 /*   By: cfico-vi <cfico-vi@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/12 19:41:37 by cfico-vi          #+#    #+#             */
-/*   Updated: 2021/02/12 20:49:45 by cfico-vi         ###   ########.fr       */
+/*   Updated: 2021/02/13 11:31:04 by cfico-vi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ int	ft_strncmp(const char *s1, const char *s2, size_t n)
 	int i;
 
 	i = 0;
-	while (*(s1 + i) && *(s1 + i) == *(s2 + i) && i < n)
+	while (*(s1 + i) && *(s1 + i) == *(s2 + i) && i < (int)n)
 		i++;
 	if (n)
 		return (*(s1 + i) - *(s2 + i));

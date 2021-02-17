@@ -1,20 +1,20 @@
 PART 1:
 
 X memset
-bzero
-memcpy
-memccpy
-memmove
-memchr
-memcmp
+X bzero
+X memcpy
+X memccpy
+X memmove
+X memchr
+X memcmp
 X strlen
 X strlcpy
 strlcat
 X strchr
 X strrchr
-strnstr
+X strnstr
 X strncmp
-atoi
+X atoi
 X isalpha
 X isdigit
 X isalnum
@@ -22,6 +22,7 @@ X isascii
 X isprint
 X toupper
 X tolower
+
 calloc
 strdup
 
@@ -44,7 +45,7 @@ ft_lstnew
 ft_lstadd_front
 ft_lstsize
 ft_lstlast
-ft_lstlast
+ft_lstadd_back
 ft_lstdelone
 ft_lstclear
 ft_lstiter
