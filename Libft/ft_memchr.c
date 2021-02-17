@@ -6,7 +6,7 @@
 /*   By: cfico-vi <cfico-vi@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/15 16:26:45 by cfico-vi          #+#    #+#             */
-/*   Updated: 2021/02/15 18:52:07 by cfico-vi         ###   ########.fr       */
+/*   Updated: 2021/02/16 22:44:27 by cfico-vi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ void	*ft_memchr(const void *s, int c, size_t n)
 	while (i < n)
 	{
 		if (ptr[i] == (unsigned char)c)
-			return (ptr[i]);
+			return ((void *)s + i);
 		i++;
 	}
 	return (0);

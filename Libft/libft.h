@@ -6,7 +6,7 @@
 /*   By: cfico-vi <cfico-vi@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/10 17:26:07 by cfico-vi          #+#    #+#             */
-/*   Updated: 2021/02/16 21:05:32 by cfico-vi         ###   ########.fr       */
+/*   Updated: 2021/02/16 22:43:07 by cfico-vi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,8 +23,8 @@ int		ft_isascii(int c);
 int		ft_isdigit(int c);
 int		ft_isprint(int c);
 int		ft_isspace(int c);
-// void	*ft_memccpy(void *dest, const void *src, size_t n);
-// void	*ft_memchr(const void *s, int c, size_t n);
+void	*ft_memccpy(void *dest, const void *src, int c, size_t n);
+void	*ft_memchr(const void *s, int c, size_t n);
 int		memcmp(const void *s1, const void *s2, size_t n);
 void	*ft_memcpy(void *dest, const void *src, size_t n);
 // void	*ft_memmove(void *dest, const void *src, size_t n);

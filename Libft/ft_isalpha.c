@@ -6,13 +6,13 @@
 /*   By: cfico-vi <cfico-vi@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/12 12:25:07 by cfico-vi          #+#    #+#             */
-/*   Updated: 2021/02/12 19:31:46 by cfico-vi         ###   ########.fr       */
+/*   Updated: 2021/02/16 21:13:57 by cfico-vi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_isalphat(int c)
+int	ft_isalpha(int c)
 {
 	return ((c >= 'A' && c <= 'Z') || (c >= 'a' && c <= 'z'));
 }

@@ -6,7 +6,7 @@
 /*   By: cfico-vi <cfico-vi@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/13 18:05:27 by cfico-vi          #+#    #+#             */
-/*   Updated: 2021/02/15 18:32:33 by cfico-vi         ###   ########.fr       */
+/*   Updated: 2021/02/16 22:36:24 by cfico-vi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,12 +21,7 @@ void	*ft_memcpy(void *dest, const void *src, size_t n)
 	i = 0;
 	ptr = (unsigned char *)dest;
 	ptr2 = (unsigned char *)src;
-	if (n > 0)
-	{
-		while (i++ < n)
-		{
-			ptr[i] = ptr2[i];
-		}
-	}
-	return (ptr);
+	while (i++ < n)
+		ptr[i] = ptr2[i];
+	return (dest);
 }
