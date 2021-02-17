@@ -23,20 +23,3 @@ int	ft_strncmp(const char *s1, const char *s2, size_t n)
 		return (*((unsigned char*)s1 + i) - *((unsigned char *)s2 + i));
 	return (0);
 }
-
-#include <stdio.h>
-#include <string.h>
-
-int main () {
-	char str1[15];
-	char str2[15];
-	int ret;
-	int ret1;
-
-	strcpy(str1, "test\200");
-	strcpy(str2, "test\0");
-	ret = strncmp(str1, str2, 6);
-	ret1 = ft_strncmp(str1, str2, 6);
-	printf("ret = %d and ret1 = %d", ret, ret1);
-	return(0);
-}
