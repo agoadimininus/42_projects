@@ -6,7 +6,7 @@
 /*   By: cfico-vi <cfico-vi@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/16 13:13:53 by cfico-vi          #+#    #+#             */
-/*   Updated: 2021/02/16 23:23:35 by cfico-vi         ###   ########.fr       */
+/*   Updated: 2021/02/16 23:26:45 by cfico-vi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,11 +28,11 @@ char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 		{
 			k = i;
 			while (haystack[k++] == needle[j++])
-				{
+			{
 				if (!needle[j])
 					return ((char *)haystack + i);
-				}
+			}
 		}
 	}
-	return(0);
+	return (0);
 }
