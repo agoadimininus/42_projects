@@ -1,31 +1,3 @@
-PART 1:
-
-X memset
-X bzero
->X memcpy
->X memccpy
->X memmove
-X memchr
->X memcmp
-X strlen
-X strlcpy
-strlcat
-X strchr
-X strrchr
->X strnstr
-X strncmp
-X atoi
-X isalpha
-X isdigit
-X isalnum
-X isascii
-X isprint
-X toupper
-X tolower
-
-calloc
-strdup
-
 PART 2
 
 ft_substr

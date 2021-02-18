@@ -6,7 +6,7 @@
 #    By: cfico-vi <cfico-vi@student.42sp.org.br>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/02/11 12:58:34 by cfico-vi          #+#    #+#              #
-#    Updated: 2021/02/17 16:28:58 by cfico-vi         ###   ########.fr        #
+#    Updated: 2021/02/18 18:04:48 by cfico-vi         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -14,6 +14,7 @@ NAME	= libft.a
 
 SRCS	= ft_atoi.c \
 			ft_bzero.c \
+			ft_calloc.c \
 			ft_isalnum.c \
 			ft_isalpha.c \
 			ft_isascii.c \
@@ -27,6 +28,7 @@ SRCS	= ft_atoi.c \
 			ft_memmove.c \
 			ft_memset.c \
 			ft_strchr.c \
+			ft_strdup.c \
 			ft_strlcat.c \
 			ft_strlcpy.c \
 			ft_strlen.c \
@@ -59,5 +61,10 @@ fclean:		clean
 			${RM} ${NAME}
 
 re:			fclean all
+
+git:
+			git add .
+			git commit -m "$m"
+			git push -u origin master
 
 .PHONY:		all clean fclean re
