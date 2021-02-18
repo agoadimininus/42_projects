@@ -6,7 +6,7 @@
 /*   By: cfico-vi <cfico-vi@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/17 17:43:21 by cfico-vi          #+#    #+#             */
-/*   Updated: 2021/02/17 17:44:28 by cfico-vi         ###   ########.fr       */
+/*   Updated: 2021/02/18 18:30:48 by cfico-vi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,5 +14,13 @@
 
 char	*ft_strdup(const char *s)
 {
+	char *new_str;
+	size_t size;
 
+	size = ft_strlen(s) + 1;
+	new_str = malloc(size);
+	if (new_str == NULL)
+		return (NULL);
+	ft_strlcpy(new_str, s, size);
+	return (new_str);
 }
