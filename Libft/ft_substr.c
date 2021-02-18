@@ -1,29 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_calloc.c                                        :+:      :+:    :+:   */
+/*   ft_substr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: cfico-vi <cfico-vi@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/02/17 17:42:07 by cfico-vi          #+#    #+#             */
-/*   Updated: 2021/02/18 18:39:24 by cfico-vi         ###   ########.fr       */
+/*   Created: 2021/02/18 18:43:44 by cfico-vi          #+#    #+#             */
+/*   Updated: 2021/02/18 18:58:20 by cfico-vi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_calloc(size_t nmemb, size_t size)
-{
-	void	*ptr;
+/*
+**Allocates (with malloc(3)) and returns a substringfrom the string ’s’.
+**The substring begins at index ’start’ and is of maximum size ’len’.
+*/
 
-	if (!nmemb || !size)
+char	*ft_substr(char const *s, unsigned int start, size_t len)
+{
+	if (start >= ft_strlen(s))
 		return (NULL);
-	else
-	{
-		ptr = malloc(sizeof(nmemb * size));
-		if (ptr == NULL)
-			return (NULL);
-		ft_bzero(ptr, nmemb * size);
-		return (ptr);
-	}
+	if (ft_strlen(s) < len)
+		len = ft_strlen(s);
+	return (ft_strndup(s + start, len));
 }

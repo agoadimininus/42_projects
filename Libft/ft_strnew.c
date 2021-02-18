@@ -1,29 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_calloc.c                                        :+:      :+:    :+:   */
+/*   ft_strnew.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: cfico-vi <cfico-vi@student.42sp.org.br>    +#+  +:+       +#+        */
+/*   By: pnicolas <pnicolas@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/02/17 17:42:07 by cfico-vi          #+#    #+#             */
-/*   Updated: 2021/02/18 18:39:24 by cfico-vi         ###   ########.fr       */
+/*   Created: 2021/02/03 15:27:25 by pnicolas          #+#    #+#             */
+/*   Updated: 2021/02/11 15:04:20 by pnicolas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_calloc(size_t nmemb, size_t size)
+char	*ft_strnew(size_t size)
 {
-	void	*ptr;
+	char	*s;
 
-	if (!nmemb || !size)
+	size++;
+	s = (char *)malloc(sizeof(char) * size);
+	if (!s)
 		return (NULL);
-	else
-	{
-		ptr = malloc(sizeof(nmemb * size));
-		if (ptr == NULL)
-			return (NULL);
-		ft_bzero(ptr, nmemb * size);
-		return (ptr);
-	}
+	ft_bzero(s, size);
+	return (s);
 }

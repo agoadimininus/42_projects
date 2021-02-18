@@ -1,29 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_calloc.c                                        :+:      :+:    :+:   */
+/*   ft_strjoin.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: cfico-vi <cfico-vi@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/02/17 17:42:07 by cfico-vi          #+#    #+#             */
-/*   Updated: 2021/02/18 18:39:24 by cfico-vi         ###   ########.fr       */
+/*   Created: 2021/02/18 18:47:34 by cfico-vi          #+#    #+#             */
+/*   Updated: 2021/02/18 19:43:16 by cfico-vi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_calloc(size_t nmemb, size_t size)
+char	*ft_strjoin(char const *s1, char const *s2)
 {
-	void	*ptr;
+	char *newstr;
+	int s1_len;
+	int s2_len;
+	int i;
 
-	if (!nmemb || !size)
+	s1_len = ft_strlen(s1);
+	s2_len = ft_strlen(s2);
+	i = 0;
+	newstr = malloc(s1_len + s2_len + 1);
+	if (newstr == NULL)
 		return (NULL);
-	else
-	{
-		ptr = malloc(sizeof(nmemb * size));
-		if (ptr == NULL)
-			return (NULL);
-		ft_bzero(ptr, nmemb * size);
-		return (ptr);
-	}
+	if (s1)
+		newstr + i++ = s1++;
+	if (s2)
+		newstr + i++ = s2++;
+	newstr + i = '\0';
+	return (newstr);
 }
