@@ -6,7 +6,7 @@
 /*   By: cfico-vi <cfico-vi@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/18 18:47:34 by cfico-vi          #+#    #+#             */
-/*   Updated: 2021/02/18 22:06:58 by cfico-vi         ###   ########.fr       */
+/*   Updated: 2021/02/19 10:47:40 by cfico-vi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	s1_len = ft_strlen(s1);
 	s2_len = ft_strlen(s2);
 	i = 0;
-	newstr = malloc(s1_len + s2_len + 1);
+	newstr = (char *)malloc(s1_len + s2_len + 1);
 	if (newstr == NULL)
 		return (NULL);
 	if (s1)

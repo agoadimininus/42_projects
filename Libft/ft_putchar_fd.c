@@ -6,8 +6,13 @@
 /*   By: cfico-vi <cfico-vi@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/18 18:46:07 by cfico-vi          #+#    #+#             */
-/*   Updated: 2021/02/18 18:46:14 by cfico-vi         ###   ########.fr       */
+/*   Updated: 2021/02/19 00:53:07 by cfico-vi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+
+void	ft_putchar_fd(char c, int fd)
+{
+	write(fd, &c, 1);
+}

@@ -6,8 +6,13 @@
 /*   By: cfico-vi <cfico-vi@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/18 18:46:26 by cfico-vi          #+#    #+#             */
-/*   Updated: 2021/02/18 18:46:33 by cfico-vi         ###   ########.fr       */
+/*   Updated: 2021/02/19 01:07:34 by cfico-vi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+
+void ft_putnbr_fd(int n, int fd)
+{
+	
+}

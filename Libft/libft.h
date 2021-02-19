@@ -6,7 +6,7 @@
 /*   By: cfico-vi <cfico-vi@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/10 17:26:07 by cfico-vi          #+#    #+#             */
-/*   Updated: 2021/02/18 19:45:57 by cfico-vi         ###   ########.fr       */
+/*   Updated: 2021/02/19 00:49:34 by cfico-vi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,7 @@
 # define LIBFT_H
 # include <string.h>
 # include <stdlib.h>
+# include <unistd.h>
 
 int		ft_atoi(const char *nptr);
 void	ft_bzero(void *s, size_t n);
