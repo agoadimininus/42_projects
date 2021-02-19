@@ -6,14 +6,14 @@
 /*   By: cfico-vi <cfico-vi@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/18 18:46:37 by cfico-vi          #+#    #+#             */
-/*   Updated: 2021/02/19 00:54:56 by cfico-vi         ###   ########.fr       */
+/*   Updated: 2021/02/19 17:30:48 by cfico-vi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void ft_putstr_fd(char *s, int fd)
+void	ft_putstr_fd(char *s, int fd)
 {
-	if (s)
+	if (*s)
 		write(fd, &s, strlen(s));
 }

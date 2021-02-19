@@ -6,13 +6,13 @@
 /*   By: cfico-vi <cfico-vi@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/18 18:46:17 by cfico-vi          #+#    #+#             */
-/*   Updated: 2021/02/19 01:06:55 by cfico-vi         ###   ########.fr       */
+/*   Updated: 2021/02/19 17:30:09 by cfico-vi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void ft_putendl_fd(char *s, int fd)
+void	ft_putendl_fd(char *s, int fd)
 {
 	if (s)
 	{
