@@ -6,7 +6,7 @@
 /*   By: cfico-vi <cfico-vi@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/18 18:47:34 by cfico-vi          #+#    #+#             */
-/*   Updated: 2021/02/18 19:43:16 by cfico-vi         ###   ########.fr       */
+/*   Updated: 2021/02/18 22:06:58 by cfico-vi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,9 +26,9 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	if (newstr == NULL)
 		return (NULL);
 	if (s1)
-		newstr + i++ = s1++;
+		*(newstr + i++) = *s1++;
 	if (s2)
-		newstr + i++ = s2++;
-	newstr + i = '\0';
+		*(newstr + i++) = *s2++;
+	*(newstr + i) = '\0';
 	return (newstr);
 }

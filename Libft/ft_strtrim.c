@@ -6,7 +6,7 @@
 /*   By: cfico-vi <cfico-vi@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/18 18:47:09 by cfico-vi          #+#    #+#             */
-/*   Updated: 2021/02/18 19:34:00 by cfico-vi         ###   ########.fr       */
+/*   Updated: 2021/02/18 22:05:05 by cfico-vi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,18 +25,19 @@ char	*ft_strtrim(char const *s1, char const *set)
 	s1_len = ft_strlen(s1);
 	newstr_len = s1_len;
 	n = s1_len;
+	i = 0;
 	newstr_i = 0;
 	set_len = ft_strlen(set);
 	if (s1_len > set_len)
 	{
 		if (!ft_strncmp(s1, set, set_len))
 		{
-			new_str_len -= set_len;
+			newstr_len -= set_len;
 			i += set_len;
 		}
 		if (!ft_strncmp(s1 + s1_len - set_len, set, set_len))
 		{
-			new_str_len -= set_len;
+			newstr_len -= set_len;
 			n -= set_len;
 		}
 	}
@@ -44,6 +45,6 @@ char	*ft_strtrim(char const *s1, char const *set)
 	if (newstr == NULL)
 		return (NULL);
 	while (i < n)
-		newstr + newstr_i++ = s1 + i++;
+		*(newstr + newstr_i++) = *(s1 + i++);
 	return (newstr);
 }
