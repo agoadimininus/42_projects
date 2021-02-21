@@ -6,13 +6,25 @@
 /*   By: cfico-vi <cfico-vi@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/18 18:47:21 by cfico-vi          #+#    #+#             */
-/*   Updated: 2021/02/19 01:10:36 by cfico-vi         ###   ########.fr       */
+/*   Updated: 2021/02/20 21:34:43 by cfico-vi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char *ft_strmapi(char const *s, char (*f)(unsignedint, char))
+char *ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {
-	
+	char *str;
+	int i;
+
+	i = 0;
+	if(!(str = malloc(sizeof(char) * (ft_strlen(s) + 1))) || !s || !f)
+		return (NULL);
+	while(s)
+		{
+			*(str + i) = f(i, *(s + i));
+			i++;
+		}
+	*(str + i) = '\0';
+	return (str);
 }

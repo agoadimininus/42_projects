@@ -6,7 +6,7 @@
 /*   By: cfico-vi <cfico-vi@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/18 18:46:37 by cfico-vi          #+#    #+#             */
-/*   Updated: 2021/02/19 17:30:48 by cfico-vi         ###   ########.fr       */
+/*   Updated: 2021/02/19 20:19:04 by cfico-vi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,5 +15,5 @@
 void	ft_putstr_fd(char *s, int fd)
 {
 	if (*s)
-		write(fd, &s, strlen(s));
+		write(fd, s, strlen(s));
 }

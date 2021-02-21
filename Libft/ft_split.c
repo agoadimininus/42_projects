@@ -6,7 +6,7 @@
 /*   By: cfico-vi <cfico-vi@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/18 18:46:51 by cfico-vi          #+#    #+#             */
-/*   Updated: 2021/02/19 17:29:36 by cfico-vi         ###   ########.fr       */
+/*   Updated: 2021/02/20 19:37:53 by cfico-vi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -60,7 +60,7 @@ char		**ft_split(char const *s, char c)
 	i = 0;
 	sub_len = 0;
 	sub_count = 0;
-	sub_count = ft_subcount(cst_s, c);
+	sub_count = ;
 	if (c == '\0' || *cst_s == '\0' || !sub_count || s == NULL)
 		return (NULL);
 	sub_split = (char **)malloc(sizeof(char *) * (sub_count + 1));
@@ -76,7 +76,7 @@ char		**ft_split(char const *s, char c)
 		{
 			sub_len = ft_strclen(cst_s, c) + 1;
 			sub_split[i] = (char *)malloc(sizeof(char) * sub_len);
-			if (&sub_split[i][0] == NULL)
+			if 	(&sub_split[i][0] == NULL)
 				return (NULL);
 			ft_strlcpy(&sub_split[i][0], cst_s, sub_len);
 			i++;
