@@ -11,6 +11,7 @@
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <stdio.h>
 
 size_t		ft_subcount(char *s, char c)
 {
@@ -60,18 +61,15 @@ char		**ft_split(char const *s, char c)
 	sub_cpy = sub_split;
 	i = 0;
 	j = 0;
-	while (*(s + j))
-	{
-		if (*(s + j) != c)
+	while (*(s + j++))
+		if (*(s + (j - 1)) != c)
 		{
-			while (*(s + j + i) != c && *(s + j + i) != '\0')
+			while (*(s + (j - 1) + i) != c && *(s + (j - 1) + i) != '\0')
 				i++;
-			*sub_cpy++ = ft_substr(s, j, i);
+			*sub_cpy++ = ft_substr(s, (j - 1), i);
 			j += i - 1;
 			i = 0;
 		}
-		j++;
-	}
 	sub_cpy = NULL;
 	return (sub_split);
 }
