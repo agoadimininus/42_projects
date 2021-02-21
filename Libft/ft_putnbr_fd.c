@@ -6,7 +6,7 @@
 /*   By: cfico-vi <cfico-vi@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/18 18:46:26 by cfico-vi          #+#    #+#             */
-/*   Updated: 2021/02/20 21:33:44 by cfico-vi         ###   ########.fr       */
+/*   Updated: 2021/02/20 23:26:13 by cfico-vi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ void	ft_putnbr_fd(int n, int fd)
 {
 	long cst;
 
-	cst = (long) n;
+	cst = (long)n;
 	if (cst < 0)
 	{
 		cst = -cst;

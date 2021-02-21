@@ -38,7 +38,7 @@ char		*ft_itoa(int n)
 		len++;
 		ncpy *= -1;
 	}
-	if (!(str = malloc(sizeof(char) * (len + 1))))
+	if (!(str = (char *)malloc(sizeof(char) * (len + 1))))
 		return (NULL);
 	*(str + len--) = '\0';
 	if (n == 0)
